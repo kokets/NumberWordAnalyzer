@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.RateLimiting;
 using NumberWordAnalyzer.Handlers;
 using NumberWordAnalyzer.Queries;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NumberWordAnalyzer.API.Controllers
 {
@@ -16,12 +17,12 @@ namespace NumberWordAnalyzer.API.Controllers
 			_query = query;
 		}
 		/// <summary>
-		///  This api endpoint procecesses a block of text and return all number words
-		/// </summary>
-		/// <param name="query"></param>
-		/// <param name="cancellationToken"></param>
-		/// <returns></returns>
-		[HttpPost("analyze")]
+		///  Process an input string and returns the count of each number word found in the text
+				/// </summary>
+				/// <param name="query"></param>
+				/// <param name="cancellationToken"></param>
+				/// <returns></returns>
+				[HttpPost("analyze")]
 		public async Task<IActionResult> Analyzer([FromBody] NumberWordInputQuery query, CancellationToken cancellationToken = default)
 		{
 			try
