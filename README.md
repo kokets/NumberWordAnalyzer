@@ -45,15 +45,6 @@ cd NumberWordAnalyzer
 
 ---
 
-## ?? Running Tests
-
-* Run from Visual Studio Test Explorer  
-* Or from CLI:
-
-```bash
-dotnet test NumberWordAnalyzer.Tests/NumberWordAnalyzer.Tests.csproj --configuration Release
-```
-
 ---
 
 ## ?? API Usage
