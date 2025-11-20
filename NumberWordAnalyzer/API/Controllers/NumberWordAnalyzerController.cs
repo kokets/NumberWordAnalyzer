@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.RateLimiting;
 using NumberWordAnalyzer.Handlers;
 using NumberWordAnalyzer.Queries;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NumberWordAnalyzer.API.Controllers
 {
@@ -11,18 +9,17 @@ namespace NumberWordAnalyzer.API.Controllers
 	public class NumberWordAnalyzerController : ControllerBase
 	{
 		private readonly INumberWordQueryHandler _query;
-
 		public NumberWordAnalyzerController(INumberWordQueryHandler query)
 		{
 			_query = query;
 		}
 		/// <summary>
 		///  Process an input string and returns the count of each number word found in the text
-				/// </summary>
-				/// <param name="query"></param>
-				/// <param name="cancellationToken"></param>
-				/// <returns></returns>
-				[HttpPost("analyze")]
+		/// </summary>
+		/// <param name="query">An input containing text</param>
+		/// <param name="cancellationToken">A token to cancel operation</param>
+		/// <returns> A dictionary where keys are number words and the values are their counts</returns>
+		[HttpPost("analyze")]
 		public async Task<IActionResult> Analyzer([FromBody] NumberWordInputQuery query, CancellationToken cancellationToken = default)
 		{
 			try

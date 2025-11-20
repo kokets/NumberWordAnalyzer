@@ -5,6 +5,9 @@ namespace NumberWordAnalyzer.Validators
 {
 	public class NumberWordInputQueryValidator : AbstractValidator<NumberWordInputQuery>
 	{
+		/// <summary>
+		/// Validate that the string is not empty it contains letters only
+		/// </summary>
 		public NumberWordInputQueryValidator()
 		{
 			RuleFor(x => x.InputString)

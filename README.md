@@ -1,17 +1,17 @@
-# NumberWordAnalyzer
+﻿# NumberWordAnalyzer
 
 A .NET 8 Web API that analyzes an input string and counts occurrences of number words (`zero` to `ten`).  
 
 ---
 
-## ?? Prerequisites
+## 📦 Prerequisites
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)  
 - [Visual Studio 2022+](https://visualstudio.microsoft.com/) (recommended)
 
 ---
 
-## ?? Setup & Run (Visual Studio 2022)
+## 🚀 Setup & Run (Visual Studio 2022)
 
 ### 1. Clone the repository
 ```bash
@@ -22,17 +22,17 @@ cd NumberWordAnalyzer
 ### 2. Open the solution
 
 * Open Visual Studio 2022  
-* File ? Open ? Project/Solution  
+* File ➜ Open ➜ Project/Solution  
 * Select `NumberWordAnalyzer.sln`
 
 ### 3. Restore NuGet packages
 
 * Visual Studio should restore automatically  
-* If not: right-click solution ? **Restore NuGet Packages**
+* If not: right-click solution → **Restore NuGet Packages**
 
 ### 4. Build the solution
 
-* Press `Ctrl + Shift + B` or go to **Build ? Build Solution**
+* Press `Ctrl + Shift + B` or go to **Build → Build Solution**
 
 ### 5. Run the API
 
@@ -47,16 +47,16 @@ cd NumberWordAnalyzer
 
 ---
 
-## ?? API Usage
+## 🔍 API Usage
 
 ### POST `/api/NumberWordAnalyzer/analyze`
 
-Send a JSON with `"input"` to get counts of number words.
+Send a JSON with `"inputString"` to get counts of number words.
 
 **Example request:**
 ```json
 {
-  "input": "onetwothreefourfivesixseveneightnineten"
+  "inputString": "onetwothreefourfivesixseveneightnineten"
 }
 ```
 
